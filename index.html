@@ -13,9 +13,9 @@
 </head>
 <body>
 
-    <main class="">
-        <section class="user-form">
-            <ul>
+    <main>
+        <section class="user-form py-5 mb-5">
+            <ul class="d-flex justify-content-around">
                 <li>
                     <label for="user-name">Nome</label>
                     <input type="text" id="user-name">
@@ -29,14 +29,17 @@
                     <input type="number" id="user-age">
                 </li>
             </ul>
-            <div class="btn-container">
-                <button id="send-btn">Invia</button>
+            <div class="btn-container text-center py-3">
+                <button class="me-4" id="send-btn">Invia</button>
                 <button id="btn-clear">Annulla</button>
             </div>
         </section>
         
-        <section class="greetings">
-    
+        <section class="greetings d-none">
+            <div class="title text-center">
+                <h2 class="mb-5">Benvenuto</h2>
+                <button class="fs-3" id="start-btn">Let's Start</button>
+            </div>
         </section>    
     </main>
     <!-- SCRIPTS -->
