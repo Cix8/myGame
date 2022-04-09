@@ -5,7 +5,7 @@ const userForm = document.querySelector('.user-form');
 const greetings = document.querySelector('.greetings');
 const questionary = document.querySelector('.questionary');
 
-let score = 0;
+let score;
 let scoreDisplay = document.getElementById('score-display');
 let answ1 = document.getElementById('answ1');
 let answ1Label = document.getElementById('label-answ1');
@@ -51,6 +51,10 @@ let solving;
 
 startBtn.addEventListener ('click',
     function () {
+        score = 0;
+        scoreDisplay.innerHTML = `Punteggio: ${score}`;
+        submitBtn.classList.remove('d-none');
+        nextBtn.classList.remove('d-none');
         userForm.classList.add('d-none');
         greetings.classList.add('d-none');
         document.querySelector('.main').classList.add('d-flex', 'justify-content-center', 'align-items-center');
@@ -303,17 +307,23 @@ submitBtn.addEventListener ('click',
 )
 
 let finalResult = document.getElementById('final-result');
+const restart = document.getElementById('restart');
+console.log(restart);
 
 nextBtn6.addEventListener ('click',
     function () {
         nextBtn6.classList.add('d-none');
-        quest.classList.add('d-none');
-        finalResult.classList.remove('d-none');
-
-        scoreDisplay.classList.add('d-none');
-        document.querySelector('.questionary .container').classList.add('d-none');
-        document.querySelector('.questionary .btn-container').classList.add('d-none');
+        questionary.classList.add('d-none');
+        document.querySelector('.final-score').classList.remove('d-none');
 
         finalResult.innerHTML = `Complimenti ${nickName.value}!!! Il tuo punteggio è di <span class='d-block'>${score}</span>`
+    }
+)
+
+restart.addEventListener ('click',
+    function () {
+        document.querySelector('.main').classList.remove('d-flex', 'justify-content-center', 'align-items-center');
+        document.querySelector('.final-score').classList.add('d-none');
+        userForm.classList.remove('d-none');
     }
 )
