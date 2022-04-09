@@ -1,3 +1,77 @@
 ul {
     list-style: none;
 }
+
+.final-score span{
+    font-size: 300px;
+    animation-name: colorzzz;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes colorzzz {
+    0% {
+        color: black;
+    }
+    5% {
+        color: green;
+    }
+    10% {
+        color: red;
+    }
+    15% {
+        color: purple;
+    }
+    20% {
+        color: orange;
+    }
+    25% {
+        color: darkolivegreen;
+    }
+    30% {
+        color: yellowgreen;
+    }
+    35% {
+        color: blue;
+    }
+    40% {
+        color: gray;
+    }
+    45% {
+        color: chocolate;
+    }
+    50% {
+        color: skyblue;
+    }
+    55% {
+        color: olivedrab;
+    }
+    60% {
+        color: indigo;
+    }
+    65% {
+        color: lime;
+    }
+    70% {
+        color: rosybrown;
+    }
+    75% {
+        color: coral;
+    }
+    80% {
+        color: goldenrod;
+    }
+    85% {
+        color: darkblue;
+    }
+    90% {
+        color: orchid;
+    }
+    95% {
+        color: yellow;
+    }
+    100% {
+        color: black;
+    }
+
+}
