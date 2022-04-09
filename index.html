@@ -13,7 +13,7 @@
 </head>
 <body>
 
-    <main class="main w-100 vh-100 bg-warning">
+    <main class="main w-100 vh-100 bg-warning position-relative">
         <section class="user-form pt-5 pb-3 mb-5 bg-dark text-warning">
             <ul class="d-flex justify-content-around">
                 <li>
@@ -43,6 +43,9 @@
         </section>
         
         <section class="questionary w-75 mx-auto d-none">
+            <div class="text-danger position-absolute top-0 end-0 pt-2 pe-5">
+                <h3 id="score-display">Punteggio: 0</h3>
+            </div>
             <div class="title mb-5">
                 <h2 class="h1" id="first-question"></h2>
             </div>
@@ -58,10 +61,24 @@
             </div>
             <div class="btn-container">
                 <button type="button" id="answ-submit-btn">Invia</button>
-                <button type="button" id="answ-clear-btn">Annulla</button>
-            </div>
-            <div class="result">
-                <h2 id="result-title"></h2>
+                <span>
+                    <button type="button" id="next-btn">Avanti</button>
+                </span>
+                <span>
+                    <button type="button" class="d-none" id="next-btn1">Avanti</button>
+                </span>
+                <span>
+                    <button type="button" class="d-none" id="next-btn2">Avanti</button>
+                </span>
+                <span>
+                    <button type="button" class="d-none" id="next-btn3">Avanti</button>
+                </span>
+                <span>
+                    <button type="button" class="d-none" id="next-btn4">Avanti</button>
+                </span>
+                <span>
+                    <button type="button" class="d-none" id="next-btn5">Avanti</button>
+                </span>
             </div>
         </section>
     </main>
