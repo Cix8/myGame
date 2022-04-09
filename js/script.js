@@ -103,6 +103,12 @@ const nextBtn5 = document.getElementById('next-btn5');
 
 const nextBtn6 = document.getElementById('next-btn6');
 
+const nextBtn7 = document.getElementById('next-btn7');
+
+const nextBtn8 = document.getElementById('next-btn8');
+
+const nextBtn9 = document.getElementById('next-btn9');
+
 nextBtn.addEventListener ('click',
     function () {
         submitBtn.classList.remove('d-none');
@@ -277,27 +283,110 @@ nextBtn5.addEventListener ('click',
     }
 )
 
+nextBtn6.addEventListener ('click', 
+    function () {
+        submitBtn.classList.remove('d-none');
+        nextBtn6.classList.add('d-none');
+        nextBtn7.classList.remove('d-none');
+        
+        solving = 'Sei tu';
+
+        quest.innerHTML = `È figlio di tuo padre e di tua madre, ma non è tuo fratello e neanche tua sorella. Chi è?`;
+        console.log(quest);
+
+        answ1.value = 'E\' tua sorella';
+        answ1Label.innerHTML = 'E\' tua sorella';
+        console.log(answ1.value);
+
+        answ2.value = 'Sei tu';
+        answ2Label.innerHTML = 'Sei tu';
+        console.log(answ2.value);
+
+        answ3.value = 'E\' tuo padre';
+        answ3Label.innerHTML = 'E\' tuo padre';
+        console.log(answ3.value);
+
+        answ4.value = 'E\' tua zia';
+        answ4Label.innerHTML = 'E\' tua zia';
+        console.log(answ4.value);
+    }
+)
+
+nextBtn7.addEventListener ('click', 
+    function () {
+        submitBtn.classList.remove('d-none');
+        nextBtn7.classList.add('d-none');
+        nextBtn8.classList.remove('d-none');
+        
+        solving = 'Da nessuna parte';
+
+        quest.innerHTML = `Se un gallo fa un uovo sulla punta di un tetto, dove cade?`;
+        console.log(quest);
+
+        answ1.value = 'Da nessuna parte';
+        answ1Label.innerHTML = 'Da nessuna parte';
+        console.log(answ1.value);
+
+        answ2.value = 'Sul tetto';
+        answ2Label.innerHTML = 'Sul tetto';
+        console.log(answ2.value);
+
+        answ3.value = 'Sulla testa del contadino';
+        answ3Label.innerHTML = 'Sulla testa del contadino';
+        console.log(answ3.value);
+
+        answ4.value = 'Sul gallo stesso';
+        answ4Label.innerHTML = 'Sul gallo stesso';
+        console.log(answ4.value);
+    }
+)
+
+nextBtn8.addEventListener ('click', 
+    function () {
+        submitBtn.classList.remove('d-none');
+        nextBtn8.classList.add('d-none');
+        nextBtn9.classList.remove('d-none');
+        
+        solving = '8';
+
+        quest.innerHTML = `Su un autobus ci sono 7 passeggeri. Quante persone ci sono su quell’autobus??`;
+        console.log(quest);
+
+        answ1.value = '7';
+        answ1Label.innerHTML = '7';
+        console.log(answ1.value);
+
+        answ2.value = '0';
+        answ2Label.innerHTML = '0';
+        console.log(answ2.value);
+
+        answ3.value = '10';
+        answ3Label.innerHTML = '10';
+        console.log(answ3.value);
+
+        answ4.value = '8';
+        answ4Label.innerHTML = '8';
+        console.log(answ4.value);
+    }
+)
+
 submitBtn.addEventListener ('click',
     function () {
-        if (answ1.checked == true && answ1.value === solving && score < 1) {
+        if (answ1.checked == true && answ1.value === solving) {
             ++score;
             console.log(score);
-        } else if (answ3.checked == true && answ3.value === solving && score < 2) {
+        } else if (answ2.checked == true && answ2.value === solving) {
             ++score;
             console.log(score);
-        } else if (answ2.checked == true && answ2.value === solving && score < 3) {
+        } else if (answ3.checked == true && answ3.value === solving) {
             ++score;
             console.log(score);
-        } else if (answ1.checked && answ1.value === solving && score < 4) {
+        } else if (answ4.checked == true && answ4.value === solving) {
             ++score;
-        } else if (answ3.checked && answ3.value === solving && score < 5) {
-            ++score;
-        } else if (answ4.checked && answ4.value === solving && score < 6) {
-            ++score;
-        } else if (answ3.checked && answ3.value === solving && score < 7) {
-            ++score;
+            console.log(score);
         } else {
             --score;
+            console.log(score);
         }
 
         submitBtn.classList.add('d-none');
@@ -310,9 +399,9 @@ let finalResult = document.getElementById('final-result');
 const restart = document.getElementById('restart');
 console.log(restart);
 
-nextBtn6.addEventListener ('click',
+nextBtn9.addEventListener ('click',
     function () {
-        nextBtn6.classList.add('d-none');
+        nextBtn9.classList.add('d-none');
         questionary.classList.add('d-none');
         document.querySelector('.final-score').classList.remove('d-none');
 
