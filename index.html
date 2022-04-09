@@ -13,8 +13,8 @@
 </head>
 <body>
 
-    <main>
-        <section class="user-form py-5 mb-5">
+    <main class="main w-100 vh-100 bg-warning">
+        <section class="user-form pt-5 pb-3 mb-5 bg-dark text-warning">
             <ul class="d-flex justify-content-around">
                 <li>
                     <label for="user-name">Nome</label>
@@ -35,12 +35,35 @@
             </div>
         </section>
         
-        <section class="greetings d-none">
+        <section class="greetings mb-5 d-none">
             <div class="title text-center">
                 <h2 class="mb-5">Benvenuto</h2>
                 <button class="fs-3" id="start-btn">Let's Start</button>
             </div>
-        </section>    
+        </section>
+        
+        <section class="questionary w-75 mx-auto d-none">
+            <div class="title mb-5">
+                <h2 class="h1" id="first-question"></h2>
+            </div>
+            <div class="container mb-5">
+                <input type="radio" id="answ1" class="mb-2" name="answer" value="">
+                <label for="answ1" id="label-answ1"></label><br>
+                <input type="radio" id="answ2" class="mb-2" name="answer" value="">
+                <label for="answ2" id="label-answ2"></label><br>
+                <input type="radio" id="answ3" class="mb-2" name="answer" value="">
+                <label for="answ3" id="label-answ3"></label><br>
+                <input type="radio" id="answ4" name="answer" value="">
+                <label for="answ4" id="label-answ4"></label>
+            </div>
+            <div class="btn-container">
+                <button type="button" id="answ-submit-btn">Invia</button>
+                <button type="button" id="answ-clear-btn">Annulla</button>
+            </div>
+            <div class="result">
+                <h2 id="result-title"></h2>
+            </div>
+        </section>
     </main>
     <!-- SCRIPTS -->
     <script src="js/script.js" type="text/javascript"></script>
