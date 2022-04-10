@@ -57,7 +57,7 @@ startBtn.addEventListener ('click',
         nextBtn.classList.remove('d-none');
         userForm.classList.add('d-none');
         greetings.classList.add('d-none');
-        document.querySelector('.main').classList.add('d-flex', 'justify-content-center', 'align-items-center');
+        document.querySelector('.ms_container').classList.add('d-flex', 'justify-content-center', 'align-items-center');
         questionary.classList.remove('d-none');
 
         console.log(userName.value);
@@ -411,7 +411,7 @@ nextBtn9.addEventListener ('click',
 
 restart.addEventListener ('click',
     function () {
-        document.querySelector('.main').classList.remove('d-flex', 'justify-content-center', 'align-items-center');
+        document.querySelector('.ms_container').classList.remove('d-flex', 'justify-content-center', 'align-items-center');
         document.querySelector('.final-score').classList.add('d-none');
         userForm.classList.remove('d-none');
     }
